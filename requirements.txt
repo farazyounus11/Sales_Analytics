@@ -1,6 +1,0 @@
-streamlit
-pandas
-streamlit-pandas
-matplotlib
-plotly
-altair
