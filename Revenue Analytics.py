@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import streamlit_pandas as sp
@@ -5,13 +6,14 @@ from itertools import combinations
 from collections import Counter
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter  # Import FuncFormatter for formatting ticks
+import plotly.express as px
 import altair as alt
 
 
 st.set_page_config(layout="wide")
 @st.cache_data
 def load_data():
-    file_path = "sales_data1.csv"  # Update with the correct path to your CSV file
+    file_path = "sales_data.csv"  # Update with the correct path to your CSV file
     df = pd.read_csv(file_path, encoding='latin1')  # Specify the encoding here
     df['ORDER_DATE'] = pd.to_datetime(df['ORDER_DATE'], errors='coerce')  # Convert to datetime
     return df
@@ -271,5 +273,3 @@ highlight = alt.Chart(pd.DataFrame({'SALES': [selected_customer_sales]})).mark_r
 
 chart = base + highlight
 st.altair_chart(chart, use_container_width=True)
-
-
