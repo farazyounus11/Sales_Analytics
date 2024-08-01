@@ -13,7 +13,7 @@ import altair as alt
 st.set_page_config(layout="wide")
 @st.cache_data
 def load_data():
-    file_path = "sales_data(2).csv"  # Update with the correct path to your CSV file
+    file_path = "sales_data1.csv"  # Update with the correct path to your CSV file
     df = pd.read_csv(file_path, encoding='latin1')  # Specify the encoding here
     df['ORDER_DATE'] = pd.to_datetime(df['ORDER_DATE'], errors='coerce')  # Convert to datetime
     return df
