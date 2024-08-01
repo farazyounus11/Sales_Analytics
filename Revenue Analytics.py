@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import pandas as pd
 import streamlit_pandas as sp
@@ -6,7 +5,6 @@ from itertools import combinations
 from collections import Counter
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter  # Import FuncFormatter for formatting ticks
-import plotly.express as px
 import altair as alt
 
 
